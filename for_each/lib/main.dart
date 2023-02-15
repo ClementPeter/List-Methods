@@ -89,17 +89,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // myFriends.forEach((friend) {
-          //   print("::::::::::::::::");
-          //   print(friend);
-          //   //change the color forEach Friend Container when Pressed
-          //  // friend.color = (Random().nextDouble() * 0xFFFFFFFF).toInt();
-          // });
-          //OR
-          for (var friend in myFriends) {
+          myFriends.forEach((friend) {
+            print("::::::::::::::::");
+            print(friend);
             //change the color forEach Friend Container when Pressed
             friend.color = (Random().nextDouble() * 0xFFFFFFFF).toInt();
-          }
+          });
+          //OR
+          // for (var friend in myFriends) {
+          //   //change the color forEach Friend Container when Pressed
+          //   friend.color = (Random().nextDouble() * 0xFFFFFFFF).toInt();
+          // }
           setState(() {});
         },
         child: const Icon(Icons.color_lens),
