@@ -38,13 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text("Map Tutorial"),
+        title: const Text("Fold Tutorial"),
         centerTitle: true,
       ),
       body: const Dashboard(),
     );
   }
 }
-
-
-//map

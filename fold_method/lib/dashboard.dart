@@ -165,7 +165,7 @@ class _DashboardState extends State<Dashboard> {
                 }),
                 //calculate the sum of the
                 DataRow(cells: [
-                  DataCell(Text("Total Amount")),
+                  const DataCell(Text("Total Amount")),
 
                   //sum item prices
                   DataCell(
