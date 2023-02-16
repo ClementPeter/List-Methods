@@ -15,12 +15,6 @@ class _DashboardState extends State<Dashboard> {
   final TextEditingController _itemController = TextEditingController();
   final TextEditingController _priceController = TextEditingController();
 
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  // }
-
   @override
   void dispose() {
     // TODO: implement dispose
@@ -31,7 +25,6 @@ class _DashboardState extends State<Dashboard> {
 
   //Items will be added here after being inputed to the textfield
   List<Item> items = [];
-  bool sort = false; //triggers the arrow up button for ascending
 
   //Declare form key fot TextFormField Validation
   final _formKey = GlobalKey<FormState>();
@@ -42,7 +35,6 @@ class _DashboardState extends State<Dashboard> {
       key: _formKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
-        // padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
             TextFormField(
@@ -125,25 +117,10 @@ class _DashboardState extends State<Dashboard> {
               ],
             ),
             DataTable(
-              sortColumnIndex: 0,
-              sortAscending: sort,
               columns: [
                 const DataColumn(label: Text('Item')),
                 //Ascending order of price
                 DataColumn(
-                  numeric: true,
-                  onSort: (columnIndex, ascending) {
-                    if (ascending) {
-                      items
-                          .sort(((a, b) => a.itemPrice.compareTo(b.itemPrice)));
-                    } else {
-                      items
-                          .sort(((a, b) => b.itemPrice.compareTo(a.itemPrice)));
-                    }
-                    setState(() {
-                      sort = ascending;
-                    });
-                  },
                   label: Center(
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,7 +157,6 @@ class _DashboardState extends State<Dashboard> {
                   )
                 ])
               ],
-
               //rows: mapItemtoDataRow(items).toList(),
             ),
           ],
@@ -188,7 +164,6 @@ class _DashboardState extends State<Dashboard> {
       ),
     );
   }
-
 }
 
 //NOT USED
