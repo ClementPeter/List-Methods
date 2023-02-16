@@ -18,7 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Description
 
-A randcountry searching app to demo .where list method usage
+A random country searching app to demo .where list method usage
 
 ## 📸 ScreenShots
 
