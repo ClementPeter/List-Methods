@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:fold_method/itemModel.dart';
 
@@ -117,19 +115,13 @@ class _DashboardState extends State<Dashboard> {
               ],
             ),
             DataTable(
-              columns: [
-                const DataColumn(label: Text('Item')),
+              columns: const [
+                DataColumn(label: Text('Item')),
                 //Ascending order of price
                 DataColumn(
+                  numeric: true,
                   label: Center(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Icon(Icons.arrow_upward_rounded, size: 15),
-                        SizedBox(width: 10),
-                        Text('Price'),
-                      ],
-                    ),
+                    child: Text('Price'),
                   ),
                 ),
               ],
